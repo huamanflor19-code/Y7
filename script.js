@@ -1,11 +1,11 @@
 import { GoogleGenAI } from "https://esm.run/@google/genai";
 
-// ✅ Gemini para chat
+// 🔹 API Gemini para chat (texto)
 const ai = new GoogleGenAI({
   apiKey: "AIzaSyDGOEA2AtjXUCKmO45RLr3t535438aFFsk"
 });
 
-// ✅ Gemini Veo para video
+// 🔹 API Gemini Veo para video
 const aiVideo = new GoogleGenAI({
   apiKey: "AIzaSyDGOEA2AtjXUCKmO45RLr3t535438aFFsk"
 });
@@ -39,7 +39,7 @@ document.getElementById("crearVideo").addEventListener("click", async () => {
       prompt: prompt,
     });
 
-    // Espera hasta que termine
+    // Esperar hasta que termine
     while (!operation.done) {
       div.textContent = "⌛ Esperando que el video esté listo...";
       await new Promise((resolve) => setTimeout(resolve, 10000));
@@ -48,7 +48,7 @@ document.getElementById("crearVideo").addEventListener("click", async () => {
       });
     }
 
-    // Muestra el video en la página
+    // Mostrar el video generado
     const videoUrl = operation.response.generatedVideos[0].video.uri;
     div.innerHTML = `
       <p>✅ Video generado:</p>
