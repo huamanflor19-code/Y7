@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "https://esm.run/@google/genai";
 
 const ai = new GoogleGenAI({
-  apiKey: "TU_API_KEY_AQUI" // 👈 inseguro en producción
+  apiKey: "AIzaSyDGOEA2AtjXUCKmO45RLr3t535438aFFsk" // 👈 inseguro en producción
 });
 
 document.getElementById("enviar").addEventListener("click", async () => {
