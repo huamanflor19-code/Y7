@@ -1,27 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Nova - IA Multimodal</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gamma API Demo - Chat, Video y Live</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    .box {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #3730a3;
+    }
+    textarea, input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    #respuesta, #videoRespuesta, #liveRespuesta {
+      margin-top: 10px;
+      padding: 10px;
+      background: #f1f1f1;
+      border-radius: 8px;
+      min-height: 40px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Nova</h1>
+  <h1>🌐 Gamma API Demo</h1>
 
-  <!-- 🔹 Sección Chat -->
-  <h2>Chatea IA</h2>
-  <textarea id="prompt" placeholder="Escribe tu pregunta..."></textarea>
-  <button id="enviar">Enviar</button>
-  <pre id="respuesta"></pre>
+  <!-- CHAT -->
+  <div class="box">
+    <h2>💬 Chat con Gamma</h2>
+    <textarea id="prompt" placeholder="Escribe tu pregunta..."></textarea>
+    <button id="enviar">Enviar</button>
+    <div id="respuesta">Aquí aparecerá la respuesta...</div>
+  </div>
 
-  <hr>
+  <!-- VIDEO -->
+  <div class="box">
+    <h2>🎬 Generar Video con Gamma</h2>
+    <input id="videoPrompt" placeholder="Describe el video..." />
+    <button id="crearVideo">Crear Video</button>
+    <div id="videoRespuesta">Aquí aparecerá el video...</div>
+  </div>
 
-  <!-- 🔹 Sección Video -->
-  <h2>Crear Video</h2>
-  <textarea id="videoPrompt" placeholder="Describe el video que quieres crear..."></textarea>
-  <button id="crearVideo">Crear Video</button>
-  <div id="videoRespuesta"></div>
+  <!-- LIVE (Audio) -->
+  <div class="box">
+    <h2>🎧 Gamma Live (Audio en tiempo real)</h2>
+    <p>Este ejemplo enviará un archivo <code>sample.wav</code> y recibirá audio como respuesta.</p>
+    <button id="iniciarLive">Iniciar Sesión Live</button>
+    <div id="liveRespuesta">Aquí aparecerán logs de la sesión...</div>
+  </div>
 
-  <script type="module" src="script.js"></script>
+  <!-- Importar tu script -->
+  <script type="module" src="app.js"></script>
 </body>
 </html>
