@@ -7,7 +7,7 @@ const ai = new GoogleGenAI({
 
 // 🔹 API Gemini Veo para video
 const aiVideo = new GoogleGenAI({
-  apiKey: "AIzaSyDGOEA2AtjXUCKmO45RLr3t535438aFFsk"
+  apiKey: "AIzaSyA-2MswbH_N3R1RmxBCDQZn76NzzE68YPQ"
 });
 
 // --- CHAT ---
